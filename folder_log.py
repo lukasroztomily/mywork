@@ -164,7 +164,7 @@ def get_me_info (filein = '', sortedin = 'zmena'):
 ttt = []
 
     
-print(get_me_info('','asdsad'))
+print(get_me_info('','test'))
 
 
 
