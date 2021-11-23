@@ -62,9 +62,7 @@ def link():
         urls.append(x)
     return urls
 
-urls = [
-    'https://books.toscrape.com/catalogue/page-1.html'
-]
+
 
 x = link()
 result = asyncio.run(main(x))
