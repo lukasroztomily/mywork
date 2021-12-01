@@ -30,3 +30,9 @@ def delivery_day(deliveryday, orderday):
   mt = int(startdate.strftime('%m'))
   
   return datetime.date(yr,mt, dt)
+
+
+
+estimate_delivery_date = delivery_day(3, datetime.datetime.today())
+print(estimate_delivery_date)
+
