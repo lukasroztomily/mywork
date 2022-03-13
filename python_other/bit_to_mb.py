@@ -1,7 +1,7 @@
 def bit_to_mb (invar):
     
     helpvar = []
-    #vzroc pro prevod bitu na MB
+    #vzroc pro prevod bitu na MB a
     MB_ = 1024.0**-2
 
     #provadi se konroly datovych typu, pro int a float se nic nemeni    
