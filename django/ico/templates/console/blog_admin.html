@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+
+
+<!-- ========================= SECTION  ========================= -->
+
+<section class="section-name padding-y-sm">
+<div class="container">
+
+
+
+
+
+<header class="section-heading">
+	{% comment %} <a href="" class="btn btn-outline-primary float-right">See all</a> {% endcomment %}
+	<h3 class="section-title">{% trans "Blog console" %} </h3>
+</header><!-- sect-heading -->
+
+
+{% include 'includes/blog_sidebar.html' %}
+	
+<div class="container">
+	<div class="row">
+
+
+
+		<main >
+			<article class="card">
+			<header class="card-header">
+		<table class="table table-striped  col-md-5" >
+			<thead>
+			  <tr>
+				<th scope="col">ID</th>
+				<th scope="col">Title</th>
+				<th scope="col">Name</th>
+				<th scope="col"></th>
+				<th scope="col" ></th>
+				<th scope="col" ></th>
+			  </tr>
+			</thead>
+			<tbody>
+				{% for blog in blogs %}
+			  <tr>
+				<th scope="row">{{blog.id}} </th>
+				<td>{{blog.title}}</td>
+				<td>{{blog.name}}</td>
+
+				<td> 
+					<a href="{% url 'edit_blog' blog.id %}" class="btn btn-info"> Edit</a>
+				</td>
+				<td> 
+					<a href="{% url 'unpublished_blog' blog.id %}" class="btn btn-warning"> Unpublished</a>
+				</td>
+				<td> 
+					<a href="{% url 'remove_blog' blog.id %}" onclick = "return confirm('Chces smazat?')" class="btn btn-danger"> Remove</a>
+				</td>
+			  </tr>
+			  {% endfor %}
+			</tbody>
+		  </table>
+</div> <!-- row.// -->
+
+</div><!-- container // -->
+</article> <!-- order-group.// --> 
+</main>
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+
+
+</body>
+</html>
+{% endblock  %}

@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+
+
+<!-- ========================= SECTION  ========================= -->
+
+<section class="section-name padding-y-sm">
+<div class="container">
+
+<header class="section-heading">
+	{% comment %} <a href="" class="btn btn-outline-primary float-right">See all</a> {% endcomment %}
+	<h3 class="section-title">{% trans "Blog console" %} </h3>
+</header><!-- sect-heading -->
+{% include 'includes/blog_sidebar.html' %}
+
+	
+<div class="container">
+	<div class="row">
+
+    
+    <div class="col-md-12">	
+    <form action="{% url 'add_blog' %}" method="POST">
+      {% csrf_token %}
+
+      <div class="card mb-3">  
+               <h5 class="card-header">Slovakia</h5>
+               
+               <div class="card-body">
+                 
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label>Title SK</label>
+                          {{ form.title_sk }}
+                    </div> <!-- form-group end.// -->
+                </div> <!-- form-row end.// -->
+                {{form.title_sk.errors}}
+
+                <div class="form-row">
+                  <div class="col form-group">
+                    <label>Headline SK</label>
+                    {{form.headline_sk}}
+                  </div> <!-- form-group end.// -->
+                  </div> <!-- form-row.// -->
+                  {{form.headline_sk.errors}}
+
+                <div class="form-row">
+                    <div class="col form-group">
+                      <label>Text SK</label>
+                      {{form.text_sk}}
+                    </div> <!-- form-group end.// -->
+                    </div> <!-- form-row.// -->
+                    {{form.text_sk.errors}}
+             
+             </div> <!-- form-row end.// -->
+            </div> <!-- form-row.// -->
+            
+
+             <div class="card mb-3">
+                <h5 class="card-header">English</h5>
+                
+              <div class="card-body">
+               
+                <div class="form-row">
+                  <div class="col form-group">
+                      <label>Title EN</label>
+                        {{ form.title_en }}
+                  </div> <!-- form-group end.// -->
+                </div> <!-- form-row end.// -->
+                {{form.title_en.errors}}
+              
+                <div class="form-row">
+                  <div class="col form-group">
+                    <label>Headline EN</label>
+                    {{form.headline_en}}
+                  </div> <!-- form-group end.// -->
+                  </div> <!-- form-row.// -->
+                  {{form.headline_en.errors}}
+
+              <div class="form-row">
+                  <div class="col form-group">
+                    <label>Text EN</label>
+                    {{form.text_en}}
+                  </div> <!-- form-group end.// -->
+                   </div> <!-- form-row.// -->
+                   {{form.text_en.errors}}
+            
+            </div>  
+          </div> <!-- form-row.// -->
+        
+              
+            <div class="card">
+              <h5 class="card-header">Deutsch</h5>
+              <div class="card-body">
+             
+                <div class="form-row">
+                <div class="col form-group">
+                    <label>Title DE</label>
+                      {{ form.title_de }}
+                </div> <!-- form-group end.// -->
+                </div> <!-- form-row end.// -->
+            {{form.title_de.errors}}
+
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Headline DE</label>
+                {{form.headline_de}}
+              </div> <!-- form-group end.// -->
+            </div> <!-- form-row.// -->
+              {{form.headline_de.errors}}
+
+            <div class="form-row">
+                <div class="col form-group">
+                  <label>Text DE</label>
+                  {{form.text_de}}
+                </div> <!-- form-group end.// -->
+            </div> <!-- form-row.// -->
+                {{form.text_de.errors}}
+
+          </div> <!-- form-row.// -->
+        </div> <!-- form-row.// -->
+        
+        <div class="card-body">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Published</label>
+                    {{form.is_published}}
+                  </div> <!-- form-group end.// -->
+                  
+              </div> <!-- form-row.// -->
+            </div> <!-- form-group end.// --> 
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Add  </button>
+                </div> <!-- form-group// -->
+                {{form.email.errors}}
+                {{form.non_field_errors}}
+          
+              </form>
+          
+          
+          
+          </div>
+        </div>
+          
+        </div>
+      
+
+</div>
+                      </section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+
+
+</body>
+</html>
+{% endblock  %}

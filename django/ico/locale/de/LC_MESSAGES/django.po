@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-06 14:18+0000\n"
+"PO-Revision-Date: 2022-01-06 20:28+0000\n"
+"Last-Translator: b'lukessda asdsad <Solo@solo.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.6\n"
+
+#: ico/settings.py:160
+msgid "Slovakia"
+msgstr ""
+
+#: ico/settings.py:161
+msgid "English"
+msgstr "Englisch"
+
+#: ico/settings.py:162
+msgid "German"
+msgstr "Deutsch"
+
+#: templates/accounts/login.html:31 templates/console/login.html:32
+msgid "Password"
+msgstr "Passwor"
+
+#: templates/accounts/login.html:39 templates/console/login.html:37
+msgid "Login"
+msgstr "Anmeldung"
+
+#: templates/console/add_blog.html:17 templates/console/blog_admin.html:21
+#: templates/console/blog_list_published.html:21
+msgid "Blog console"
+msgstr ""
+
+#: templates/console/add_user.html:17
+#: templates/console/list_blocked_user.html:21
+#: templates/console/user_admin.html:17
+#: templates/console/waiting_approve_user.html:21
+msgid "User console"
+msgstr ""
+
+#: templates/console/home.html:17
+msgid "Admin console"
+msgstr ""
+
+#: templates/home.html:26
+msgid "Popular products"
+msgstr "Beliebte Produkte"
+
+#~ msgid "Language"
+#~ msgstr "Lan"

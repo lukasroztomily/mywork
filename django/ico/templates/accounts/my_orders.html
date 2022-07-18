@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section class="section-conten padding-y bg">
+
+  {% include 'includes/alerts.html' %}
+<div class="container">
+	<div class="row">
+{% include 'includes/dashboard_sidebar.html' %}
+	<main class="col-md-9">
+		<article class="card">
+		<header class="card-header">
+			<strong class="d-inline-block mr-3">Change password</strong>
+			
+		</header>
+		<div class="card-body">
+
+        <div class="row">
+          <div class="col-md-12">	
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Collapsible Group Item #1
+                    </button>
+                  </h2>
+                </div>
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    
+
+                    <form>
+                      <div class="mb-3">
+                      <div class="custom-control custom-radio mb-0">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                      </div>
+
+                    </div>
+                      <div> <input type = "submit" value = "Save" class = "btn btn-primary"></div>
+                      </form>
+
+
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Collapsible Group Item #3
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <form action = "" method="POST" enctype="multipart/form-data">
+                      <label for="">PDF documents</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                          
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
+                      <input type = "submit" value = "Save" class = "btn btn-primary">
+                    </form>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+                            </div>
+                      
+                            </div> <!-- row.// -->
+                          </div> <!-- card-body .// -->
+                      
+                          </article> <!-- order-group.// -->
+                        </main>
+                      </div> <!-- row.// -->
+                      </div>
+                      
+                      
+                      </section>
+                      
+                      {% endblock %}

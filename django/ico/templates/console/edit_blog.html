@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section class="section-conten padding-y-sm">
+
+  {% include 'includes/alerts.html' %}
+<div class="container">
+	<div class="row">
+	<main class="col-md-12">
+		
+		<header class="card-header">
+			<strong class="d-inline-block mr-3">Edit Article</strong>
+			
+		</header>
+		
+        <div class="row">
+          <div class="col-md-12">	
+            <form action = "{% url 'edit_blog' blog_id %}" method="POST" >
+                        {% csrf_token %}
+                        <div class="card card mb-3">  
+                          <h5 class="card-header">Slovakia</h5>
+                          
+                          <div class="card-body">
+                            
+                           <div class="form-row">
+                               <div class="col form-group">
+                                   <label>Title SK</label>
+                                     {{ blog_form.title_sk }}
+                               </div> <!-- form-group end.// -->
+                           </div> <!-- form-row end.// -->
+                           {{blog_form.title_sk.errors}}
+
+                           <div class="form-row">
+                            <div class="col form-group">
+                              <label>Headline SK</label>
+                              {{blog_form.headline_sk}}
+                            </div> <!-- form-group end.// -->
+                            </div> <!-- form-row.// -->
+                            {{blog_form.headline_sk.errors}}
+
+                           <div class="form-row">
+                               <div class="col form-group">
+                                 <label>Text SK</label>
+                                 {{blog_form.text_sk}}
+                               </div> <!-- form-group end.// -->
+                          </div> <!-- form-row.// -->
+                          {{blog_form.text_sk.errors}}
+                        
+                        </div> <!-- form-row end.// -->
+                       </div> <!-- form-row.// -->
+                       
+           
+                        <div class="card card mb-3">
+                           <h5 class="card-header">English</h5>
+                           
+                         <div class="card-body">
+                          
+                           <div class="form-row">
+                             <div class="col form-group">
+                                 <label>Title EN</label>
+                                   {{ blog_form.title_en }}
+                             </div> <!-- form-group end.// -->
+                           </div> <!-- form-row end.// -->
+                           {{blog_form.title_en.errors}}
+
+                           <div class="form-row">
+                            <div class="col form-group">
+                              <label>Headline EN</label>
+                              {{blog_form.headline_en}}
+                            </div> <!-- form-group end.// -->
+                            </div> <!-- form-row.// -->
+                            {{blog_form.headline_en.errors}}
+
+                         <div class="form-row">
+                             <div class="col form-group">
+                               <label>Text EN</label>
+                               {{blog_form.text_en}}
+                             </div> <!-- form-group end.// -->
+                        </div> <!-- form-row.// -->
+                        {{blog_form.text_en.errors}}
+                       </div>  
+                     </div> <!-- form-row.// -->
+                   
+                         
+                       <div class="card mb-3">
+                         <h5 class="card-header">Deutsch</h5>
+                         <div class="card-body">
+                         <div class="form-row">
+                           <div class="col form-group">
+                               <label>Title DE</label>
+                                 {{ blog_form.title_de }}
+                           </div> <!-- form-group end.// -->
+                       </div> <!-- form-row end.// -->
+                       {{blog_form.title_de.errors}}
+
+                       <div class="form-row">
+                        <div class="col form-group">
+                          <label>Headline DE</label>
+                          {{blog_form.headline_de}}
+                        </div> <!-- form-group end.// -->
+                        </div> <!-- form-row.// -->
+                        {{blog_form.headline_de.errors}}
+
+                       <div class="form-row">
+                           <div class="col form-group">
+                             <label>Text DE</label>
+                             {{blog_form.text_de}}
+                           </div> <!-- form-group end.// -->
+                        </div> <!-- form-row.// -->
+                        {{blog_form.text_de.errors}}
+                        
+                          </div> <!-- form-row.// -->
+                    </div> <!-- form-row.// -->
+                      
+                  
+                    <div class="form-group">
+                      <input type = "submit" value = "Save" class = "btn btn-primary btn-block">
+                    </div> <!-- form-row.// -->
+                       
+
+
+
+                    {{blog_form.non_field_errors}}
+                                
+                              </form>
+                            </div>
+                      
+                            </div> <!-- row.// -->
+                          </div> <!-- card-body .// -->
+                      
+                          
+                        </main>
+                      </div> <!-- row.// -->
+                      
+                      
+                      
+                      </section>
+                      
+                      {% endblock %}

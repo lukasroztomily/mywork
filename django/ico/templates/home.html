@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+<!-- ========================= SECTION MAIN ========================= -->
+
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+
+<section class="section-name padding-y-sm">
+<div class="container">
+
+<header class="section-heading">
+	{% comment %} <a href="" class="btn btn-outline-primary float-right">See all</a> {% endcomment %}
+	<h3 class="section-title">{% trans "Blog" %} </h3>
+</header><!-- sect-heading -->
+
+
+
+<div class="row">
+	<div class="col-md-10">
+	{% get_current_language as CURRENT_LANGUAGE %}
+
+	{% for blog in blogs %}
+
+			
+		{% if  CURRENT_LANGUAGE == 'sk'%}
+
+		<div class="card mb-3">
+
+			<div class="card-header">
+				<h5 class="float-left" >{{blog.title_sk}}</h5>
+				<div class="text-muted float-right" >28.10.2021</div>
+			</div>
+			
+
+				<div class="card-body">
+				
+				<p class="card-text">{{blog.headline_sk}}</p>
+				
+			  </div>
+		</div>	
+		{% endif %}
+		
+		{% if  CURRENT_LANGUAGE == 'en'%}
+		
+		<div class="card mb-3">
+				
+				<div class="card-header">
+					<h5 class="float-left" >{{blog.title_en}}</h5>
+					<div class="text-muted float-right" >28.10.2021</div>
+				</div>
+
+				<div class="card-body">
+				
+				<p class="card-text">{{blog.headline_en}}</p>
+				
+			  </div>
+		</div>		
+		{% endif %}	
+		
+	
+		{% if  CURRENT_LANGUAGE == 'de'%}
+			
+		<div class="card mb-3">
+			
+			<div class="card-header">
+				<h5 class="float-left" >{{blog.title_de}}</h5>
+				<div class="text-muted float-right" >28.10.2021</div>
+			</div>
+
+				<div class="card-body">
+				
+				<p class="card-text">{{blog.headline_de}}</p>
+				
+			  </div>
+		</div>	
+		{% endif %}
+
+			
+	
+
+
+			{% endfor %}
+
+		
+
+
+
+</div> <!-- row.// -->
+</div><!-- container // -->
+</div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+
+
+</body>
+</html>
+{% endblock  %}
